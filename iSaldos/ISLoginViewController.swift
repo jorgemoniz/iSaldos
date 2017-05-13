@@ -11,6 +11,9 @@ import Parse
 import AVFoundation
 
 class ISLoginViewController: UIViewController {
+
+    //MARK: - Variables locales
+    var player : AVPlayer!
     
     //MARK: - IBOutlets
     @IBOutlet weak var myUsernameTF: UITextField!
@@ -19,29 +22,42 @@ class ISLoginViewController: UIViewController {
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     
     @IBAction func doLoginACTION(_ sender: Any) {
-        
+        let signIn = APISingIn(pUsername: myUsernameTF.text!, pPassword: myPasswordTF.text!)
+        do {
+            try signIn.singInUser()
+        } catch let error {
+            present(muestraVC("Lo sentimos", messageData: "\(error.localizedDescription)"), animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        muestraVideo()
+        myActivityIndicator.isHidden = true
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    //MARK: - Utils
+    func muestraVideo() {
+        //Videos
+        let videoPath = Bundle.main.path(forResource: "Nike_iOS", ofType: "mp4")
+        player = AVPlayer(url: URL(fileURLWithPath: videoPath!))
+        player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+        let playerlayer = AVPlayerLayer(player: player)
+        playerlayer.frame = self.view.frame
+        playerlayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        self.view.layer.insertSublayer(playerlayer, at: 0)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd),
+                                               name: Notification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: player.currentItem)
+        player.seek(to: kCMTimeZero)
+        player.play()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func playerItemDidReachEnd() {
+        player.seek(to: kCMTimeZero)
     }
-    */
-
 }
