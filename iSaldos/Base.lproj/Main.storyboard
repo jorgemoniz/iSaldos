@@ -239,9 +239,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myOmitirBTN" destination="zU5-fj-tQB" id="3Rk-HL-9EZ"/>
-                        <outlet property="myPageShowGallery" destination="3Wg-RX-mqi" id="LDh-Df-z1S"/>
-                        <outlet property="myScrollShowGallery" destination="Y50-d4-LFj" id="Xzt-pU-na8"/>
+                        <outlet property="myPageControl" destination="3Wg-RX-mqi" id="oJp-T0-pGS"/>
+                        <outlet property="myScrollViewGallery" destination="Y50-d4-LFj" id="Zwz-Me-zEK"/>
                         <segue destination="xyh-0i-CvB" kind="presentation" id="bnR-hu-Ngu"/>
                     </connections>
                 </viewController>
@@ -562,7 +561,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="accessApp:" destination="CBe-ME-8gT" eventType="touchUpInside" id="FIy-f4-yFl"/>
+                                            <action selector="doLoginACTION:" destination="CBe-ME-8gT" eventType="touchUpInside" id="3Zs-0o-HZg"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash_iSaldos" translatesAutoresizingMaskIntoConstraints="NO" id="RrL-Y0-wdN">
@@ -607,11 +606,9 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myAccederBTN" destination="fbI-2p-qgW" id="nvb-Kk-hBR"/>
-                        <outlet property="myActiINd" destination="oND-1a-yNd" id="GZd-91-Tek"/>
-                        <outlet property="myPasswordTF" destination="wMW-65-tAP" id="gRQ-PS-V09"/>
-                        <outlet property="myRegistrarseBTN" destination="Ol5-5t-qBu" id="ZfE-U4-NrA"/>
-                        <outlet property="myUsernameTF" destination="rab-xY-mUe" id="CcS-jL-z6c"/>
+                        <outlet property="myActivityIndicator" destination="oND-1a-yNd" id="A0T-Z5-PBR"/>
+                        <outlet property="myPasswordTF" destination="wMW-65-tAP" id="QMu-xI-duA"/>
+                        <outlet property="myUsernameTF" destination="rab-xY-mUe" id="uKk-Bp-ZUn"/>
                         <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContollerFromLogin" id="Odd-gc-QFi"/>
                     </connections>
                 </viewController>
@@ -1407,6 +1404,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     </view>
                     <connections>
                         <outlet property="myImageLogoSaldos" destination="HRW-0O-UiR" id="8oJ-yW-hhD"/>
+                        <outlet property="myImageSplashSaldos" destination="HRW-0O-UiR" id="7hC-kU-aJU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3k-hU-zT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2479,7 +2477,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ps-eb-Nmp" id="6eC-fk-dUu">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
