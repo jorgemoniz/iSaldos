@@ -25,6 +25,7 @@ class ISLoginViewController: UIViewController {
         let signIn = APISingIn(pUsername: myUsernameTF.text!, pPassword: myPasswordTF.text!)
         do {
             try signIn.singInUser()
+            self.performSegue(withIdentifier: "jumpToViewControllerFromLogin", sender: self)
         } catch let error {
             present(muestraVC("Lo sentimos", messageData: "\(error.localizedDescription)"), animated: true, completion: nil)
         }

@@ -415,14 +415,15 @@
                     </tableView>
                     <connections>
                         <outlet property="myActInd" destination="hYT-Kd-TJn" id="7Eq-GL-eSm"/>
-                        <outlet property="myApellidoTF" destination="dad-YH-TnW" id="nNp-H6-vaI"/>
-                        <outlet property="myEmailTF" destination="gsi-J2-a5Z" id="nK9-il-6qW"/>
-                        <outlet property="myImagenPerfil" destination="eOy-fu-0cv" id="tid-mF-OHY"/>
-                        <outlet property="myMovilTF" destination="IPH-0Y-Hgt" id="bjI-Rc-Fb8"/>
-                        <outlet property="myNombreTF" destination="H82-97-5wR" id="QgL-tM-Ljz"/>
-                        <outlet property="myPasswordTF" destination="GQJ-58-rgj" id="uTR-9R-a6Y"/>
-                        <outlet property="myUsernameTF" destination="Wzr-gV-5CR" id="wty-5K-gYn"/>
-                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContoller" id="PMB-TT-YxY"/>
+                        <outlet property="myActivityIndicator" destination="hYT-Kd-TJn" id="EhB-15-CIF"/>
+                        <outlet property="myApellidoTF" destination="dad-YH-TnW" id="OGK-Xx-MUd"/>
+                        <outlet property="myEmailTF" destination="gsi-J2-a5Z" id="cCf-rC-spI"/>
+                        <outlet property="myImagenPerfil" destination="eOy-fu-0cv" id="lx8-jH-8Ve"/>
+                        <outlet property="myMovilTF" destination="IPH-0Y-Hgt" id="83n-CL-QQ0"/>
+                        <outlet property="myNombreTF" destination="H82-97-5wR" id="FOd-ZC-Loo"/>
+                        <outlet property="myPasswordTF" destination="GQJ-58-rgj" id="1Ha-Ue-JCG"/>
+                        <outlet property="myUsernameTF" destination="Wzr-gV-5CR" id="GM2-Q8-asS"/>
+                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewController" id="PMB-TT-YxY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozX-WJ-fdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -609,7 +610,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         <outlet property="myActivityIndicator" destination="oND-1a-yNd" id="A0T-Z5-PBR"/>
                         <outlet property="myPasswordTF" destination="wMW-65-tAP" id="QMu-xI-duA"/>
                         <outlet property="myUsernameTF" destination="rab-xY-mUe" id="uKk-Bp-ZUn"/>
-                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContollerFromLogin" id="Odd-gc-QFi"/>
+                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewControllerFromLogin" id="Odd-gc-QFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi6-3b-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2586,6 +2587,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Odd-gc-QFi"/>
-        <segue reference="nX1-Ui-Xl1"/>
+        <segue reference="H3W-9g-Zj5"/>
     </inferredMetricsTieBreakers>
 </document>
